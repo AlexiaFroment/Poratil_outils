@@ -1,0 +1,115 @@
+[
+  {
+    "id": 100,
+    "tool": {
+      "name": "TUFIN AURORA",
+      "url": "https://gnt-fw-compliance.carrefour.com/",
+      "category": "Tools manage C4",
+      "description": "Orchestrateur DOF",
+      "doc": ""
+    },
+    "contact": {
+      "name": "Bruno DUBOIS",
+      "email": "",
+      "phone": ""
+    },
+    "img": "https://www.tufin.com/wp-content/uploads/2023/07/aurora-500.webp"
+  },
+  {
+    "id": 101,
+    "tool": {
+      "name": "NETSKOPE",
+      "url": "https://gnt-fw-compliance.carrefour.com/",
+      "category": "Tools manage C4",
+      "description": "Solution VPN/Proxy",
+      "doc": "https://docs.google.com/document/d/1jqhHCBneLhsm6zcIEWUrFHLSSE5QXa5uie1OAOdrni8/edit?usp=drive_link"
+    },
+    "contact": {
+      "name": "",
+      "email": "netskope-support-leads@netskope.com",
+      "phone": ""
+    },
+    "img": "https://www.tufin.com/wp-content/uploads/2023/07/aurora-500.webp"
+  },
+  {
+    "id": 102,
+    "tool": {
+      "name": "XWIKI",
+      "url": "https://wiki-drt-op.carrefour.com/",
+      "category": "Tools manage C4",
+      "description": "Espace documentaire",
+      "doc": "https://wiki-drt-op.carrefour.com/bin/view/Main/"
+    },
+    "contact": {
+      "name": "Anael BELLAHSEN",
+      "email": "",
+      "phone": ""
+    },
+    "img": "https://www.tufin.com/wp-content/uploads/2023/07/aurora-500.webp"
+  },
+  {
+    "id": 103,
+    "tool": {
+      "name": "PULSE VPN",
+      "url": "https://vpnportal.carrefour.com/dana-na/auth/url_admin/welcome.cgi",
+      "category": "Tools manage C4",
+      "description": "Accès VPN partenaires & clients chromebook",
+      "doc": "https://drive.google.com/drive/folders/1_MTJ6l9cVf2ilKMaovriZ3C1rCJX0zPc/"
+    },
+    "contact": {
+      "name": "Benjamin Afonso / GDI",
+      "email": "",
+      "phone": ""
+    },
+    "img": "https://www.tufin.com/wp-content/uploads/2023/07/aurora-500.webp"
+  },
+
+  {
+    "id": 200,
+    "tool": {
+      "name": "SFR PROXI",
+      "url": "https://www.sfrbusiness.fr/espace-client/authentification/#/login/authentification",
+      "category": "Tool used by DSR",
+      "description": "Plateforme Opérateur",
+      "doc": ""
+    },
+    "contact": {
+      "name": "",
+      "email": "",
+      "phone": ""
+    },
+    "img": "https://www.tufin.com/wp-content/uploads/2023/07/aurora-500.webp"
+  },
+  {
+    "id": 300,
+    "tool": {
+      "name": "PORTAIL AUTOMATION",
+      "url": "https://network-api.carrefour.com/ui/",
+      "category": "Tool automation team",
+      "description": "Portail des services réseaux automatisés",
+      "doc": ""
+    },
+    "contact": {
+      "name": "Laurent PISON",
+      "email": "dsr_automation@carrefour.com",
+      "phone": ""
+    },
+    "img": "https://www.tufin.com/wp-content/uploads/2023/07/aurora-500.webp"
+  },
+  {
+    "id": 400,
+    "tool": {
+      "name": "Pa2Pa4",
+      "url": "https://docs.google.com/spreadsheets/d/1mO6UozLIEbnuH47ntDlTGSZPIaoVoq6H/edit#gid=371460462",
+      "category": "C4's VM & Servers",
+      "description": "",
+      "doc": ""
+    },
+    "contact": {
+      "name": "",
+      "email": "",
+      "phone": ""
+    },
+    "img": "https://www.tufin.com/wp-content/uploads/2023/07/aurora-500.webp"
+  }
+]
