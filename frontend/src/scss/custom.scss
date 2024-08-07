@@ -1,0 +1,14 @@
+// CUSTOM COLORS
+$theme-colors: (
+  "primary": #057195,
+  "secondary": #6d98ba,
+  "dark": #053650,
+  "light": #f5ffff,
+  "success": #95c623,
+  "danger": #f93234,
+  "info": #011e2e,
+  "warning": #011e2ec7,
+);
+
+// IMPORT ALL OF BOOTSTRAP 'S CSS
+@import "./../../node_modules/bootstrap/scss/bootstrap.scss";

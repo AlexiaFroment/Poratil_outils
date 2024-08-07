@@ -1,0 +1,13 @@
+@import "@/scss/custom";
+* {
+  //   color: map-get($theme-colors, warning);
+  color: map-get($theme-colors, info);
+}
+a {
+  text-decoration: none;
+  //   color: map-get($theme-colors, primary);
+  font-weight: 500;
+}
+a:hover {
+  font-weight: 700;
+}

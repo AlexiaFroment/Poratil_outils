@@ -4,7 +4,7 @@
     "tool": {
       "name": "TUFIN AURORA",
       "url": "https://gnt-fw-compliance.carrefour.com/",
-      "category": "Tools manage C4",
+      "category": "Manage C4",
       "description": "Orchestrateur DOF",
       "doc": ""
     },
@@ -20,7 +20,7 @@
     "tool": {
       "name": "NETSKOPE",
       "url": "https://gnt-fw-compliance.carrefour.com/",
-      "category": "Tools manage C4",
+      "category": "Manage C4",
       "description": "Solution VPN/Proxy",
       "doc": "https://docs.google.com/document/d/1jqhHCBneLhsm6zcIEWUrFHLSSE5QXa5uie1OAOdrni8/edit?usp=drive_link"
     },
@@ -36,7 +36,7 @@
     "tool": {
       "name": "XWIKI",
       "url": "https://wiki-drt-op.carrefour.com/",
-      "category": "Tools manage C4",
+      "category": "Manage C4",
       "description": "Espace documentaire",
       "doc": "https://wiki-drt-op.carrefour.com/bin/view/Main/"
     },
@@ -52,7 +52,7 @@
     "tool": {
       "name": "PULSE VPN",
       "url": "https://vpnportal.carrefour.com/dana-na/auth/url_admin/welcome.cgi",
-      "category": "Tools manage C4",
+      "category": "Manage C4",
       "description": "Accès VPN partenaires & clients chromebook",
       "doc": "https://drive.google.com/drive/folders/1_MTJ6l9cVf2ilKMaovriZ3C1rCJX0zPc/"
     },
@@ -69,7 +69,7 @@
     "tool": {
       "name": "SFR PROXI",
       "url": "https://www.sfrbusiness.fr/espace-client/authentification/#/login/authentification",
-      "category": "Tool used by DSR",
+      "category": "DSR",
       "description": "Plateforme Opérateur",
       "doc": ""
     },
@@ -85,7 +85,7 @@
     "tool": {
       "name": "PORTAIL AUTOMATION",
       "url": "https://network-api.carrefour.com/ui/",
-      "category": "Tool automation team",
+      "category": "Team automation",
       "description": "Portail des services réseaux automatisés",
       "doc": ""
     },

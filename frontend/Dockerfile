@@ -7,6 +7,9 @@ WORKDIR /app
 # Copier package.json et package-lock.json
 COPY package*.json ./
 
+# Supprimer le dossier node_modules existant (pour nettoyer le cache)
+RUN rm -rf node_modules
+
 # Installer les dépendances
 RUN npm install
 

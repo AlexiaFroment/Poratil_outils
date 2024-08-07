@@ -1,3 +1,13 @@
+import { Home } from "@/pages/Home";
+import { Footer } from "@/components/Footer";
+import { HeroSection } from "./components/HeroSection";
+
 export const App = () => {
-  return <div>App Carrefour rouge</div>;
+  return (
+    <>
+      <HeroSection />
+      <Home />
+      <Footer />
+    </>
+  );
 };
