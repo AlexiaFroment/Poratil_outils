@@ -1,18 +1,39 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Container, Form, InputGroup } from "react-bootstrap";
+
 import heroImg from "@/assets/HeroSection.webp";
 import logo from "@/assets/carrefourLogoBlanc.png";
-
 import { IoMdSearch } from "react-icons/io";
 
-export const HeroSection: React.FC = () => {
+import referentielTools from "@/data/referentielTools.json";
+import { CardData } from "@/modules/Types";
+
+type HeroSectionProps = {
+  onFilter: (filteredTools: CardData[]) => void;
+  title: string;
+  showSearchInput: boolean;
+};
+
+export const HeroSection: React.FC<HeroSectionProps> = ({
+  onFilter,
+  title,
+  showSearchInput,
+}) => {
   const [searchTool, setSearchTool] = useState("");
 
-  const handleSearchTool = (e) => {
+  const handleSearchTool = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value: string = e.target.value;
-    value.length>2 && setSearchTool(value);
+    setSearchTool(value);
   };
-  console.log(searchTool);
+
+  useEffect(() => {
+    const filtered = referentielTools.filter((tool) =>
+      tool.tool.name
+        .toLocaleLowerCase()
+        .includes(searchTool.toLocaleLowerCase())
+    );
+    onFilter(filtered);
+  }, [searchTool, onFilter]);
 
   return (
     <section
@@ -40,21 +61,23 @@ export const HeroSection: React.FC = () => {
             alt='logo'
             className='logo'
             style={{ height: "35px" }}></img>
-          <h3 className='text-light px-2'> Outils Carrefour</h3>
+          <h3 className='text-light px-2'>{title}</h3>
         </Container>
-        <Container className='d-flex justify-content-center'>
-          <InputGroup className='py-5' style={{ width: "80%" }}>
-            <InputGroup.Text id='searchData'>
-              <IoMdSearch size={20} />
-            </InputGroup.Text>
-            <Form.Control
-              placeholder='Recherchez votre outil'
-              aria-label='Recherchez votre outil'
-              aria-describedby='searchData'
-              onChange={handleSearchTool}
-            />
-          </InputGroup>
-        </Container>
+        {showSearchInput && (
+          <Container className='d-flex justify-content-center'>
+            <InputGroup className='py-5' style={{ width: "80%" }}>
+              <InputGroup.Text id='searchData'>
+                <IoMdSearch size={20} />
+              </InputGroup.Text>
+              <Form.Control
+                placeholder='Recherchez votre outil'
+                aria-label='Recherchez votre outil'
+                aria-describedby='searchData'
+                onChange={handleSearchTool}
+              />
+            </InputGroup>
+          </Container>
+        )}
       </Container>
     </section>
   );
