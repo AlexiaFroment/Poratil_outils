@@ -5,8 +5,8 @@
 }
 a {
   text-decoration: none;
-  //   color: map-get($theme-colors, primary);
-  font-weight: 500;
+  color: map-get($theme-colors, info);
+  font-weight: 400;
 }
 a:hover {
   font-weight: 700;

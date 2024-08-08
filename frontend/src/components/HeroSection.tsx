@@ -1,9 +1,19 @@
+import { useState } from "react";
 import { Container, Form, InputGroup } from "react-bootstrap";
 import heroImg from "@/assets/HeroSection.webp";
 import logo from "@/assets/carrefourLogoBlanc.png";
-import { FcSearch } from "react-icons/fc";
+
+import { IoMdSearch } from "react-icons/io";
 
 export const HeroSection: React.FC = () => {
+  const [searchTool, setSearchTool] = useState("");
+
+  const handleSearchTool = (e) => {
+    const value: string = e.target.value;
+    value.length>2 && setSearchTool(value);
+  };
+  console.log(searchTool);
+
   return (
     <section
       className='hero_section position-relative d-flex'
@@ -35,12 +45,13 @@ export const HeroSection: React.FC = () => {
         <Container className='d-flex justify-content-center'>
           <InputGroup className='py-5' style={{ width: "80%" }}>
             <InputGroup.Text id='searchData'>
-              <FcSearch size={20} color='black' />
+              <IoMdSearch size={20} />
             </InputGroup.Text>
             <Form.Control
               placeholder='Recherchez votre outil'
               aria-label='Recherchez votre outil'
               aria-describedby='searchData'
+              onChange={handleSearchTool}
             />
           </InputGroup>
         </Container>

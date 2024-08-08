@@ -1,6 +1,7 @@
 import referentielTools from "@/data/referentielTools.json";
 import { Container, Card, Col, Tabs, Tab } from "react-bootstrap";
 import { CardData } from "@/modules/Types";
+import { MdInfo } from "react-icons/md";
 
 const categoryColors: { [key: string]: string } = {
   "Manage C4": "yellow",
@@ -35,19 +36,20 @@ export const ToolCard: React.FC = () => {
                   <Card.Img
                     variant='top'
                     src={card.img}
-                    style={{ height: "200px" }}
+                    style={{ height: "200px", borderRadius: "0" }}
                   />
                   <Card.Body>
                     <Card.Title>{card.tool.name}</Card.Title>
                     <h6 style={{ backgroundColor }} className='p-1 text-light'>
                       {card.tool.category}
                     </h6>
-                    <Card.Text>
-                      {card.tool.description}
-                      <br />
-                      <a href={card.tool.doc}>📖 documentation</a>
-                    </Card.Text>
-                    <a href={card.tool.url} className='btn btn-primary'>
+                    <Card.Text>{card.tool.description}</Card.Text>
+
+                    <a href={card.tool.doc}>
+                      <MdInfo /> documentation
+                    </a>
+
+                    <a href={card.tool.url} className='btn btn-primary mt-2'>
                       Accéder à l&apos;outil
                     </a>
                   </Card.Body>
