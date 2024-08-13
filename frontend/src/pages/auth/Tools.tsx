@@ -3,11 +3,13 @@ import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 import { HeroSection } from "@/components/HeroSection";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import { ToolCard } from "@/components/ToolCard";
 import referentielTools from "@/data/referentielTools.json";
 import { CardData } from "@/modules/Types";
 
-export const Home: React.FC = () => {
+export const Tools: React.FC = () => {
   const [filteredTools, setFilteredTools] =
     useState<CardData[]>(referentielTools);
   const handleFilter = (filtered: CardData[]) => {
@@ -22,10 +24,10 @@ export const Home: React.FC = () => {
       />
       <Container fluid>
         <Row>
-          <Col md={1} className='bg-primary'>
-            navigation
+          <Col md={1} className='p-0'>
+            <Navbar />
           </Col>
-          <Col md={11} className='bg-secondary'>
+          <Col md={11}>
             <Row className='p-3'>
               {filteredTools.map((card) => (
                 <ToolCard key={card.id} card={card} />
@@ -34,6 +36,7 @@ export const Home: React.FC = () => {
           </Col>
         </Row>
       </Container>
+      <Footer />
     </>
   );
 };

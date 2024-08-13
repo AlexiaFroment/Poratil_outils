@@ -1,8 +1,8 @@
 @import "@/scss/custom";
 * {
-  //   color: map-get($theme-colors, warning);
-  color: map-get($theme-colors, info);
+  // color: map-get($theme-colors, info);
 }
+
 a {
   text-decoration: none;
   color: map-get($theme-colors, info);

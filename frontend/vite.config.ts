@@ -1,11 +1,11 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import sass from "sass";
-import { resolve } from "path";
-import { dirname } from "path";
-import { fileURLToPath } from "url";
+import { defineConfig } from "vite"
+import react from "@vitejs/plugin-react"
+import sass from "sass"
+import { resolve } from "path"
+import { dirname } from "path"
+import { fileURLToPath } from "url"
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -28,4 +28,4 @@ export default defineConfig({
     host: "0.0.0.0", // Permet à Vite d'écouter toutes les interfaces
     port: 5173,
   },
-});
+})
