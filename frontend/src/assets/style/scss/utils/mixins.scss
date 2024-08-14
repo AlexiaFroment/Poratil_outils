@@ -1,0 +1,3 @@
+@mixin gridtemplatecolomns($value) {
+  grid-template-columns: repeat($value, 1fr);
+}

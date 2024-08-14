@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Container, Form, InputGroup } from "react-bootstrap";
 
-import heroImg from "@/assets/HeroSection.webp";
-import logo from "@/assets/carrefourLogoBlanc.png";
+import heroImg from "@/assets/img/HeroSection.webp";
+import logo from "@/assets/img/carrefourLogoBlanc.png";
 import { IoMdSearch } from "react-icons/io";
 
 import referentielTools from "@/data/referentielTools.json";
@@ -21,11 +21,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 }) => {
   const [searchTool, setSearchTool] = useState("");
 
-  const handleSearchTool = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value: string = e.target.value;
-    setSearchTool(value);
-  };
-
   useEffect(() => {
     const filtered = referentielTools.filter((tool) =>
       tool.tool.name
@@ -35,23 +30,28 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
     onFilter(filtered);
   }, [searchTool, onFilter]);
 
+  const handleSearchTool = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value: string = e.target.value;
+    setSearchTool(value);
+  };
+
   return (
     <section
       className='hero_section position-relative d-flex'
       style={{
+        height: "200PX",
+        width: "100%",
         backgroundImage: `url(${heroImg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        width: "100vw",
-        height: "250PX",
       }}>
       <div
         className='overlay position-absolute t-0 l-0'
         style={{
-          width: "100vw",
-          height: "250px",
-          background: "#0C0E0F",
-          opacity: "80%",
+          height: "200px",
+          width: "100%",
+          background: "#053650",
+          opacity: "85%",
           zIndex: "1",
         }}></div>
       <Container className='position-relative' style={{ zIndex: "2" }}>
@@ -65,7 +65,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         </Container>
         {showSearchInput && (
           <Container className='d-flex justify-content-center'>
-            <InputGroup className='py-5' style={{ width: "80%" }}>
+            <InputGroup className='py-3' style={{ width: "80%" }}>
               <InputGroup.Text id='searchData'>
                 <IoMdSearch size={20} />
               </InputGroup.Text>

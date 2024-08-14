@@ -1,33 +1,49 @@
-import { useState } from "react";
+import { useParams } from "react-router-dom";
+import { useState, useEffect, useCallback } from "react";
+import { Outlet } from "react-router-dom";
 
 import { Container, Row, Col } from "react-bootstrap";
-
 import { HeroSection } from "@/components/HeroSection";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
+import { CardData } from "@/modules/Types";
 import { ToolCard } from "@/components/ToolCard";
 import referentielTools from "@/data/referentielTools.json";
-import { CardData } from "@/modules/Types";
 
 export const Tools: React.FC = () => {
+  const { category } = useParams<{ category: string }>();
+
   const [filteredTools, setFilteredTools] =
     useState<CardData[]>(referentielTools);
-  const handleFilter = (filtered: CardData[]) => {
+
+  const handleFilter = useCallback((filtered: CardData[]) => {
     setFilteredTools(filtered);
-  };
+  }, []);
+
+  useEffect(() => {
+    if (category) {
+      setFilteredTools(
+        referentielTools.filter(
+          (tool: CardData) => tool.tool.category === category
+        )
+      );
+    } else {
+      setFilteredTools(referentielTools);
+    }
+  }, [category]);
+
   return (
-    <>
-      <HeroSection
-        onFilter={handleFilter}
-        title='Outils Carrefour'
-        showSearchInput={true}
-      />
-      <Container fluid>
+    <section>
+      <Container fluid className='p-0'>
+        <HeroSection
+          onFilter={handleFilter}
+          title={
+            category
+              ? `Outils de la catégorie : ${category}`
+              : "Outils Carrefour"
+          }
+          showSearchInput={true}
+        />
         <Row>
-          <Col md={1} className='p-0'>
-            <Navbar />
-          </Col>
-          <Col md={11}>
+          <Col className='p-3'>
             <Row className='p-3'>
               {filteredTools.map((card) => (
                 <ToolCard key={card.id} card={card} />
@@ -35,8 +51,8 @@ export const Tools: React.FC = () => {
             </Row>
           </Col>
         </Row>
+        <Outlet />
       </Container>
-      <Footer />
-    </>
+    </section>
   );
 };

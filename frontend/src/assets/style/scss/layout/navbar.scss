@@ -1,0 +1,17 @@
+.sidebar {
+  transition: width 0.3s ease;
+}
+
+.link {
+  gap: 15px;
+  transition: all 0.5s;
+}
+.link:hover {
+  font-weight: 700;
+  background: $dark;
+  transition: all 0.5s;
+}
+.activeLink {
+  background: $secondary;
+  color: $dark;
+}

@@ -1,0 +1,10 @@
+.main_layout_container {
+  flex: 1;
+  overflow: hidden;
+}
+
+.outlet_container {
+  flex: 1;
+  // overflow-y: auto;
+  transition: margin-left 0.3s ease;
+}

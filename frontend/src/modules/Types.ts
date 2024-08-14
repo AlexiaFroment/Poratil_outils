@@ -1,4 +1,9 @@
 // TOOLCARD
+export interface NavbarProps {
+  isOpen: boolean;
+  toggleNavbar: () => void;
+}
+
 export interface CardData {
   id: number;
   img: string;

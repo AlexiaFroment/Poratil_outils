@@ -11,4 +11,6 @@ $theme-colors: (
 );
 
 // IMPORT ALL OF BOOTSTRAP 'S CSS
-@import "./../../node_modules/bootstrap/scss/bootstrap.scss";
+// @import "./../../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "./../../../../../node_modules/bootstrap/scss/bootstrap.scss";

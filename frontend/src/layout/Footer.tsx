@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer className='bg-dark text-center p-3'>
+    <footer className='bg-dark text-center p-3 '>
       <span className='text-light'>
         Nous contacter :{" "}
         <a
