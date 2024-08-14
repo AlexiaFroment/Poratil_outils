@@ -11,12 +11,9 @@ export const Layout: React.FC = () => {
     <div className='layout_container d-flex flex-column h-100'>
       <div className='main_layout_container d-flex'>
         <Navbar isOpen={isOpen} toggleNavbar={toggleNavbar} />
-        <div
-          className='outlet_container'
-          // style={{ marginLeft: isOpen ? "150px" : "50px" }}
-        >
+        <section className='outlet_container'>
           <Outlet context={{ isOpen, toggleNavbar }} />
-        </div>
+        </section>
       </div>
       <Footer />
     </div>

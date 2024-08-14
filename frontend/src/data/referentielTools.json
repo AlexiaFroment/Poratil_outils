@@ -13,7 +13,7 @@
       "email": "",
       "phone": ""
     },
-    "img": "https://www.tufin.com/wp-content/uploads/2023/07/aurora-500.webp"
+    "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": 101,
@@ -29,7 +29,7 @@
       "email": "netskope-support-leads@netskope.com",
       "phone": ""
     },
-    "img": "https://www.tufin.com/wp-content/uploads/2023/07/aurora-500.webp"
+    "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": 102,
@@ -45,7 +45,7 @@
       "email": "",
       "phone": ""
     },
-    "img": "https://www.tufin.com/wp-content/uploads/2023/07/aurora-500.webp"
+    "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": 103,
@@ -61,7 +61,7 @@
       "email": "",
       "phone": ""
     },
-    "img": "https://www.tufin.com/wp-content/uploads/2023/07/aurora-500.webp"
+    "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
 
   {
@@ -78,14 +78,14 @@
       "email": "",
       "phone": ""
     },
-    "img": "https://www.tufin.com/wp-content/uploads/2023/07/aurora-500.webp"
+    "img": "https://plus.unsplash.com/premium_photo-1661963212517-830bbb7d76fc?q=80&w=2772&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": 300,
     "tool": {
       "name": "PORTAIL AUTOMATION",
       "url": "https://network-api.carrefour.com/ui/",
-      "category": "Team automation",
+      "category": "Automation",
       "description": "Portail des services réseaux automatisés",
       "doc": ""
     },
@@ -94,14 +94,14 @@
       "email": "dsr_automation@carrefour.com",
       "phone": ""
     },
-    "img": "https://www.tufin.com/wp-content/uploads/2023/07/aurora-500.webp"
+    "img": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 870w "
   },
   {
     "id": 400,
     "tool": {
       "name": "Pa2Pa4",
       "url": "https://docs.google.com/spreadsheets/d/1mO6UozLIEbnuH47ntDlTGSZPIaoVoq6H/edit#gid=371460462",
-      "category": "C4's VM & Servers",
+      "category": "C4 VM & Servers",
       "description": "",
       "doc": ""
     },

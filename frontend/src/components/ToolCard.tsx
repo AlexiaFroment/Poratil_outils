@@ -2,19 +2,12 @@ import { Container, Card, Col, Tabs, Tab } from "react-bootstrap";
 import { CardData } from "@/modules/Types";
 import { MdInfo } from "react-icons/md";
 
-const categoryColors: { [key: string]: string } = {
-  "Manage C4": "yellow",
-  DSR: "red",
-  "Team automation": "grey",
-  "C4's VM & Servers": "blue",
-};
-
 type ToolCardProps = {
   card: CardData;
 };
 
 export const ToolCard: React.FC<ToolCardProps> = ({ card }) => {
-  const backgroundColor = categoryColors[card.tool.category] || "transparent";
+  
   return (
     <>
       <Col
@@ -31,17 +24,31 @@ export const ToolCard: React.FC<ToolCardProps> = ({ card }) => {
             // transition={false}
             id='toolCardTabs'>
             <Tab eventKey='outil' title='Outil'>
-              <Card.Img
-                variant='top'
-                src={card.img}
-                style={{ height: "200px", borderRadius: "0" }}
-              />
+              <div style={{ position: "relative" }}>
+                <Card.Img
+                  variant='top'
+                  src={card.img}
+                  style={{ height: "200px", borderRadius: "0" }}
+                />
+                <Card.ImgOverlay
+                  className='d-flex justify-content-center align-items-center'
+                  style={{
+                    backgroundColor: "rgba(0, 0, 0, 0.5)",
+                    color: "white",
+                    fontSize: "1.2rem",
+                    fontWeight: "bold",
+                    textAlign: "center",
+                  }}>
+                  <span>{card.tool.category}</span>
+                </Card.ImgOverlay>
+              </div>
+
               <Card.Body>
                 <Card.Title>{card.tool.name}</Card.Title>
-                <h6 style={{ backgroundColor }} className='p-1 text-light'>
-                  {card.tool.category}
-                </h6>
-                <Card.Text>{card.tool.description}</Card.Text>
+
+                <Card.Text style={{ height: "50px" }}>
+                  {card.tool.description}
+                </Card.Text>
 
                 <a href={card.tool.doc}>
                   <MdInfo /> documentation

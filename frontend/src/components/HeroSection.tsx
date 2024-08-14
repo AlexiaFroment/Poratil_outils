@@ -8,27 +8,31 @@ import { IoMdSearch } from "react-icons/io";
 import referentielTools from "@/data/referentielTools.json";
 import { CardData } from "@/modules/Types";
 
+const defaultFilter: (filteredTools: CardData[]) => void = () => {};
+
 type HeroSectionProps = {
-  onFilter: (filteredTools: CardData[]) => void;
+  onFilter?: (filteredTools: CardData[]) => void;
   title: string;
   showSearchInput: boolean;
 };
 
 export const HeroSection: React.FC<HeroSectionProps> = ({
-  onFilter,
+  onFilter = defaultFilter,
   title,
   showSearchInput,
 }) => {
   const [searchTool, setSearchTool] = useState("");
 
   useEffect(() => {
-    const filtered = referentielTools.filter((tool) =>
-      tool.tool.name
-        .toLocaleLowerCase()
-        .includes(searchTool.toLocaleLowerCase())
-    );
-    onFilter(filtered);
-  }, [searchTool, onFilter]);
+    if (showSearchInput && onFilter) {
+      const filtered = referentielTools.filter((tool) =>
+        tool.tool.name
+          .toLocaleLowerCase()
+          .includes(searchTool.toLocaleLowerCase())
+      );
+      onFilter(filtered);
+    }
+  }, [searchTool, onFilter, showSearchInput]);
 
   const handleSearchTool = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value: string = e.target.value;
@@ -36,7 +40,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   };
 
   return (
-    <section
+    <div
       className='hero_section position-relative d-flex'
       style={{
         height: "200PX",
@@ -79,6 +83,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </Container>
         )}
       </Container>
-    </section>
+    </div>
   );
 };

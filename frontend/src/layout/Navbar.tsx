@@ -2,6 +2,8 @@ import { NavLink } from "react-router-dom";
 import { NavbarProps } from "@/modules/Types";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { ImHome3, ImCogs, ImSwitch } from "react-icons/im";
+import { FaServer, FaRobot, FaNetworkWired } from "react-icons/fa";
+import { MdVpnLock } from "react-icons/md";
 
 export const Navbar: React.FC<NavbarProps> = ({ isOpen, toggleNavbar }) => {
   const menuItem = [
@@ -16,15 +18,30 @@ export const Navbar: React.FC<NavbarProps> = ({ isOpen, toggleNavbar }) => {
       icon: <ImCogs style={{ color: "#f5ffff" }} />,
     },
     {
+      path: "/tools/Manage C4",
+      name: "Manage C4",
+      icon: <MdVpnLock style={{ color: "#f5ffff" }} />,
+    },
+    {
       path: "/tools/DSR",
       name: "DSR",
-      icon: <ImCogs style={{ color: "#f5ffff" }} />,
+      icon: <FaNetworkWired style={{ color: "#f5ffff" }} />,
+    },
+    {
+      path: "/tools/Automation",
+      name: "Automation",
+      icon: <FaRobot style={{ color: "#f5ffff" }} />,
+    },
+    {
+      path: "/tools/C4 VM & Servers",
+      name: "C4 VM & Servers",
+      icon: <FaServer style={{ color: "#f5ffff" }} />,
     },
   ];
 
   return (
     <nav
-      style={{ width: isOpen ? "150px" : "50px" }}
+      style={{ width: isOpen ? "170px" : "50px" }}
       className='sidebar d-flex flex-column  bg-info'>
       <div className='top_section d-flex align-items-center p-3'>
         <div
