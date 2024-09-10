@@ -7,7 +7,6 @@ type ToolCardProps = {
 };
 
 export const ToolCard: React.FC<ToolCardProps> = ({ card }) => {
-  
   return (
     <>
       <Col
@@ -50,11 +49,17 @@ export const ToolCard: React.FC<ToolCardProps> = ({ card }) => {
                   {card.tool.description}
                 </Card.Text>
 
-                <a href={card.tool.doc}>
-                  <MdInfo /> documentation
-                </a>
+                <p>
+                  <a href={card.tool.doc} target='_blank' rel='noreferrer'>
+                    <MdInfo /> documentation
+                  </a>
+                </p>
 
-                <a href={card.tool.url} className='btn btn-primary mt-2'>
+                <a
+                  href={card.tool.url}
+                  target='_blank'
+                  rel='noreferrer'
+                  className='btn btn-primary mt-2'>
                   Accéder à l&apos;outil
                 </a>
               </Card.Body>

@@ -20,22 +20,22 @@ export const Navbar: React.FC<NavbarProps> = ({ isOpen, toggleNavbar }) => {
     {
       path: "/tools/Manage C4",
       name: "Manage C4",
-      icon: <MdVpnLock style={{ color: "#f5ffff" }} />,
+      icon: <MdVpnLock style={{ color: "#acccdd", height: "0.8em" }} />,
     },
     {
       path: "/tools/DSR",
       name: "DSR",
-      icon: <FaNetworkWired style={{ color: "#f5ffff" }} />,
+      icon: <FaNetworkWired style={{ color: "#acccdd", height: "0.8em" }} />,
     },
     {
       path: "/tools/Automation",
       name: "Automation",
-      icon: <FaRobot style={{ color: "#f5ffff" }} />,
+      icon: <FaRobot style={{ color: "#acccdd", height: "0.8em" }} />,
     },
     {
       path: "/tools/C4 VM & Servers",
       name: "C4 VM & Servers",
-      icon: <FaServer style={{ color: "#f5ffff" }} />,
+      icon: <FaServer style={{ color: "#acccdd", height: "0.8em" }} />,
     },
   ];
 

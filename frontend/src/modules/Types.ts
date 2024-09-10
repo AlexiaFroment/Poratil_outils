@@ -1,4 +1,9 @@
-// TOOLCARD
+export interface AuthContextProps {
+  isAuthenticated: boolean;
+  token: string | null;
+  logout: () => void;
+}
+
 export interface NavbarProps {
   isOpen: boolean;
   toggleNavbar: () => void;

@@ -6,15 +6,15 @@
   box-sizing: border-box;
 }
 
-html {
-  /* Définir la taille de base de la police */
-  // font-size: 24px;
-}
+// html {
+//   /* Définir la taille de base de la police */
+//   font-size: 24px;
+// }
 
 body {
   /* Choisir une police générique */
-  // font-family: Montserrat, sans-serif;
-  // color: #000;
+  font-family: Montserrat, sans-serif;
+  color: $info;
 }
 
 a {
@@ -28,4 +28,8 @@ a:hover {
 
 ul {
   list-style: none;
+}
+
+p {
+  margin-bottom: 0;
 }
